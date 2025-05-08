@@ -1,0 +1,4 @@
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 288761772666.dkr.ecr.us-east-1.amazonaws.com
+docker build -t xavierlokison/test .
+docker tag xavierlokison/test:latest 288761772666.dkr.ecr.us-east-1.amazonaws.com/xavierlokison/test:latest
+docker push 288761772666.dkr.ecr.us-east-1.amazonaws.com/xavierlokison/test:latest
